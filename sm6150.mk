@@ -277,12 +277,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
-# MiuiCamera
-ifeq ($(TARGET_USES_MIUI_CAMERA),true)
-TARGET_CAMERA_PACKAGE_NAME := com.android.camera
-$(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
-endif
-
 # Moto Dolby
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
